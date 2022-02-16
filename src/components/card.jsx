@@ -15,8 +15,8 @@ let Mycard = (props) => {
                     }}
                >
                     <Card
-                         style={{ height: "700px", width: "28rem" }}
-                         className="m-3 w-100 row justify-content-around bg-light border  shadow rounded-3"
+                         style={{ height: "700px", width: "30rem" }}
+                         className="m-2 row justify-content-around bg-light border  shadow rounded-3"
                     >
                          <Card.Img
                               variant="top"
@@ -27,22 +27,25 @@ let Mycard = (props) => {
                               <Card.Title className=" m-2 display-5 text-dark">
                                    {props.title}
                               </Card.Title>
-
-                              <Button
-                                   id="go"
-                                   className="m-2 w-50"
-                                   variant="success"
+                              <a
+                                   href={props.link}
+                                   style={{
+                                        display: "inline",
+                                        width: "7em",
+                                        height: "2em",
+                                   }}
+                                   className="text-light display-6 text-decoration-none "
+                                   target={"_blank"}
                               >
-                                   {" "}
-                                   <a
-                                        href={props.link}
-                                        className="text-light display-6 text-decoration-none "
-                                        target={"_blank"}
+                                   <Button
+                                        id="go"
+                                        className="m-2 w-100"
+                                        variant="success"
                                    >
                                         {" "}
                                         Go
-                                   </a>
-                              </Button>
+                                   </Button>
+                              </a>
                          </Card.Body>
                     </Card>
                </motion.div>

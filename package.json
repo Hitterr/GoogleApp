@@ -27,6 +27,29 @@
           "name": "hitterr",
           "email": "oussemajridi78@gmail.com"
      },
+     "make_targets": {
+          "win32": [
+               "squirrel"
+          ],
+          "darwin": [
+               "zip",
+               "dmg"
+          ],
+          "linux": [
+               "deb",
+               "rpm",
+               "flatpak",
+               "snap"
+          ]
+     },
+     "electronPackagerConfig": {},
+     "electronRebuildConfig": {},
+     "electronWinstallerConfig": {},
+     "electronInstallerDMG": {},
+     "electronInstallerFlatpak": {},
+     "electronInstallerDebian": {},
+     "electronInstallerRedhat": {},
+     "electronInstallerSnap": {},
      "license": "MIT",
      "config": {
           "forge": {
@@ -37,8 +60,11 @@
                     {
                          "name": "@electron-forge/maker-squirrel",
                          "config": {
-                              "name": "google_app",
-                              "icon": "google.ico"
+                              "iconUrl": "google.ico",
+                              "exe": "googleapp.exe",
+                              "name": "googleApp",
+                              "certificateFile": "./cert.pfx",
+                              "certificatePassword": "this-is-a-secret"
                          }
                     },
                     {
@@ -86,6 +112,7 @@
           "@vercel/webpack-asset-relocator-loader": "^1.7.0",
           "css-loader": "^6.6.0",
           "electron": "17.0.0",
+          "electron-winstaller": "^5.0.0",
           "file-loader": "^6.2.0",
           "node-loader": "^2.0.0",
           "style-loader": "^3.3.1"

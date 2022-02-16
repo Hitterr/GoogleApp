@@ -1,6 +1,8 @@
 const { app, BrowserWindow } = require("electron");
 const { dirname } = require("path");
 const path = require("path");
+// NB: Use this syntax within an async function, Node does not have support for
+//     top-level await as of Node 12.
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require("electron-squirrel-startup")) {
